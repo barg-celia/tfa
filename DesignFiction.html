@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta property="og:site_name" content="Célia Bargoin">
+  <meta property="og:title" content="Design fiction"> 
+  <meta property="og:description" content="Site qui montre comment j'ai fait mon projet design fiction"> 
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://celia-bargoin.be/tfa"> 
+  <meta property="og:image" content="http://celia-bargoin.be/assets/Images_comp/df.jpg"> 
+  <meta property="og:image:width" content="1200"> 
+  <meta property="og:image:height" content="630">
+  <title>Design fiction</title>
+  <link rel="stylesheet" href="styles/app.css">
+  <link href="https://fonts.googleapis.com/css2?family=Titillium+Web&display=swap" rel="stylesheet">
+<!-- CDN particles.js -->
+<script src="https://cdn.jsdelivr.net/npm/particles.js@2.0.0/particles.min.js"></script>
+
+</head>
+
+<body class="body__df">
+  <div id="particles-js" style="position: fixed; top:0; left:0; width:100%; height:100%; z-index: -1;"></div>
+
+  <section class="presentation">
+    <h1 class="h1--noafter h1df">Hello there!</h1>
+    <h2 class="h2__df">Imagine toi dans un futur proche si les marques pouvaient créer des filtres pour changer ton environnement et te pousser à acheter</h2>
+    <h2 class="h2__df">Je vais l'imaginer pour vous à travers ce site</h2>
+
+    <p>Sur ce site je vais vour présentez trois marques et donc trois types ambiances différentes.</p>
+    <p>Il y a plusieurs bénéfices pour les marques :</p>
+
+    <ul class="ul__df">
+        <li>Créer de l’engagement</li>
+        <li>Renforcer la notoriété de la marque</li>
+        <li>Atteindre un public cible</li>
+        <li>Générer de l’achat pour un produit</li>
+    </ul>
+    
+  </section>
+
+  <section class="explication">
+    <h2 class="h2__df">Petite explication</h2>
+    <p class="avec-retours">Le Design fiction est une méthode de travail qui vise à aborder dans un futur proche
+       les conséquences possibles des “nouvelles technologies” dans le vie quotidienne 
+       présentées sous la forme d’une mise en situation la plus adaptée à la thématique retenue</p>
+    <p class="avec-retours">Pour trouver notre technologie sur laquelle nous allions travailler, 
+      nous avons lu beaucoup d'article sur le site l'ADN. 
+      Et sur base de cette technologie il faillait trouver ce qu'il allais changer dans le temps</p>
+  </section>
+  
+  <section class="h3__filtres">
+    <h3>Présentations des filtres</h3>
+  </section>
+
+  <!-- Différents tupe de filtres (sensoriel, rétro, éducatif genre calorie d'un produit )
+        photos des après -->
+  <div class="filtres">
+        <p>Tu peux cliquer sur le filtre qui t'intéresse pour voir les détails</p>
+        <div class="filtres__track">
+            <div class="filtres__presentations filtre1"></div>
+            <div class="filtres__presentations filtre2"></div>
+            <div class="filtres__presentations filtre3"></div>
+        </div>
+  </div>
+
+  <div class="carousel-indicators">
+    <span class="dot active"></span>
+    <span class="dot"></span>
+    <span class="dot"></span>
+  </div>
+
+  <div class="carousel-buttons">
+    <button class="btn__df" id="prev">Précédent</button>
+    <button class="btn__df" id="next">Suivant</button>
+  </div>
+ 
+  <!-- Aide de chat gpt pour faire le modal/overlay -->
+
+  <div id="modalOverlay" class="modal-overlay hidden">
+    <div class="modal">
+      <button id="closeModal" class="modal-close">✖</button>
+      <div id="modalContent"></div>
+      <a id="voirPlusBtn" href="#" class="voir-plus-btn">Voir plus</a>
+    </div>
+  </div>
+
+  <section class="filtre__1" id="filtre-1">
+    <h3 class="h3__df">Filtre sensoriel</h3>
+    <p>Filtre de la marque sol de janeiro</p>
+    
+    <div class="carousel__df">
+        <div class="slide__df">
+            <div class="rect df__img1"></div>
+            <div class="filtre__titre">Avant</div>
+        </div>
+        <div class="slide__df">
+            <div class="rect df__img2"></div>
+            <div class="filtre__titre">Après</div>
+        </div>
+    </div>
+    <p>Les éléments ajouter grâce au filtre sont l'effet flou, les particules brillantes et la lumière dorée</p>
+  </section>
+
+  <section class="filtre__2" id="filtre-2">
+    <h3 class="h3__df">Filtre éducatif</h3>
+    <p>Filtre de la marque coca</p>
+    <div class="carousel__df">
+        <div class="slide__df">
+            <div class="rect df__img3"></div>
+            <div class="filtre__titre">Avant</div>
+        </div>
+        <div class="slide__df">
+            <div class="rect df__img4"></div>
+            <div class="filtre__titre">Après</div>
+        </div>
+    </div>
+    <p>Les éléments ajouer sont les bons et les mauvais ingrédients du produit</p>
+  </section>
+
+  <section class="filtre__3" id="filtre-3">
+    <h3 class="h3__df">Filtre rétro</h3>
+    <p>Filtre de la marque sol de janeiro</p>
+    <div class="carousel__df">
+        <div class="slide__df">
+            <div class="rect df__img5"></div>
+            <div class="filtre__titre">Avant</div>
+        </div>
+        <div class="slide__df">
+            <div class="rect df__img6"></div>
+            <div class="filtre__titre">Après</div>
+        </div>
+    </div>
+    <p>Les éléments ajouer avec le filtre sont l'effet glitch, les efftes old school et l'esthétique vhs</p>
+  </section>
+  <p class="retour"><a class="a__df" href="index.html">Revenir sur mon portfolio</a></p>
+  <script src="scripts/app.js" defer></script>
+  <footer class="footer__df">
+    <p class="p__footer--df">© Célia Bargoin – 2025</p>
+    <p class="p__footer--df"><a href="Crédits.html">Crédits</a></p>
+</footer>
+</body>
+
+</html>
