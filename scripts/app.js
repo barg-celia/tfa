@@ -183,3 +183,24 @@ if (typeof particlesJS !== 'undefined') {
 }
 )
 }
+
+
+function checkCarouselOverflow() {
+  const carousel = document.querySelector('.carousel');
+  if (!carousel) return;
+  if (carousel.scrollWidth > carousel.clientWidth) {
+    // contenu déborde → scroll activé
+    carousel.style.overflowX = 'auto';
+    carousel.style.justifyContent = 'flex-start';
+  } else {
+    // tout tient → scroll désactivé + centré
+    carousel.style.overflowX = 'hidden';
+    carousel.style.justifyContent = 'center';
+  }
+}
+
+// appel au chargement
+checkCarouselOverflow();
+
+// appel au redimensionnement
+window.addEventListener('resize', checkCarouselOverflow);
